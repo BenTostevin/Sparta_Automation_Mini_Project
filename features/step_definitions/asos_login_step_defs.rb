@@ -19,3 +19,13 @@ end
 Then(/^I receive the following password error: (.*)$/) do |error|
   expect(@asos_site.asos_login.password_error_message).to eq "#{error}"
 end
+
+
+
+When("I click submit") do
+  @asos_site.asos_login.click_sign_in
+end
+
+Then(/^I receive the following error block: (.*)$/) do |error|
+  expect(@asos_site.asos_login.error_block_message).to eq "#{error}"
+end
