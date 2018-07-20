@@ -5,6 +5,7 @@ class ASOS_Registration
 
   EMAIL_ERROR_ID = '#Email-error'
   FIRST_NAME_ERROR_ID = '#FirstName-error'
+  LAST_NAME_ERROR_ID = '#LastName-error'
 
 
   def enter_email(email)
@@ -24,7 +25,6 @@ class ASOS_Registration
 
 
 
-
   def email_error_message
     find(EMAIL_ERROR_ID).text
   end
@@ -33,5 +33,8 @@ class ASOS_Registration
     find(FIRST_NAME_ERROR_ID).text
   end
 
+  def last_name_error
+    find(LAST_NAME_ERROR_ID).text
+  end
 
 end
