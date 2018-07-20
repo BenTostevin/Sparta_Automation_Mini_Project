@@ -11,5 +11,8 @@ class ASOS_Site
     ASOS_Login.new
   end
 
+  def asos_registration
+    ASOS_Registration.new
+  end
 
 end
