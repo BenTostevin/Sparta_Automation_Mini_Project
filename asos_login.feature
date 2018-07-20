@@ -12,6 +12,12 @@ Feature: Asos Login
     When I enter in the password field <password>
     Then I receive the following email error: <error>
 
+  Scenario Outline: Leave the password field blank
+    Given I access the asos login page
+    And I enter in the password field <password>
+    When I enter in the email field <email>
+    Then I receive the following email error: <error>
+
   Examples:
    | email | password | error |
    |  | Password01! | Oops! You need to type your email here |
