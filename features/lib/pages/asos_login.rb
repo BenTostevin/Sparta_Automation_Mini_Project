@@ -24,7 +24,7 @@ class ASOS_Login
   end
 
   def password_error_message
-    find(EMAIL_ERROR_ID).text
+    find(PASSWORD_ERROR_ID).text
   end
 
 end

@@ -8,11 +8,12 @@ class ASOS_Homepage
 
   def visit_home_page
     visit(ASOS_HOMEPAGE)
-    sleep 1
+    sleep 2
   end
 
   def click_login
     find(LOGIN_ID).hover
+    sleep 1
     click_link('Sign In')
     sleep 1
   end
