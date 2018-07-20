@@ -13,5 +13,9 @@ When(/^I enter in the password field (.*)$/) do |password|
 end
 
 Then(/^I receive the following email error: (.*)$/) do |error|
+  expect(@asos_site.asos_login.email_error_message).to eq "#{error}"
+end
+
+Then(/^I receive the following password error: (.*)$/) do |error|
   expect(@asos_site.asos_login.password_error_message).to eq "#{error}"
 end
