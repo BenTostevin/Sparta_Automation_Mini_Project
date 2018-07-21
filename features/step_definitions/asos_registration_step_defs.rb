@@ -16,6 +16,14 @@ When(/^I enter in the last name registration field (.*)$/) do |last_name|
   @asos_site.asos_registration.enter_last_name(last_name)
 end
 
+When(/^I enter in the password registration field (.*)$/) do |password|
+  @asos_site.asos_registration.enter_password(password)
+end
+
+Given(/^I enter the day in the date field (.*)$/) do |day|
+  @asos_site.asos_registration.enter_day(day)
+end
+
 
 
 
@@ -24,10 +32,18 @@ Then(/^I receive the following email registration error: (.*)$/) do |error|
   expect(@asos_site.asos_registration.email_error_message).to eq "#{error}"
 end
 
-Then(/^I receive the following first name registration error: (.*)$/) do |error|
+Then(/^I receive the following first name error: (.*)$/) do |error|
   expect(@asos_site.asos_registration.first_name_error).to eq "#{error}"
 end
 
 Then(/^I receive the following last name error: (.*)$/) do |error|
   expect(@asos_site.asos_registration.last_name_error).to eq "#{error}"
+end
+
+Then(/^I receive the following password registration error: (.*)$/) do |error|
+  expect(@asos_site.asos_registration.password_error).to eq "#{error}"
+end
+
+Then(/^I get the following date error: (.*)$/) do |error|
+  expect(@asos_site.asos_registration.date_error).to eq "#{error}"
 end

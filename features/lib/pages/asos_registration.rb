@@ -6,6 +6,8 @@ class ASOS_Registration
   EMAIL_ERROR_ID = '#Email-error'
   FIRST_NAME_ERROR_ID = '#FirstName-error'
   LAST_NAME_ERROR_ID = '#LastName-error'
+  PASSWORD_ERROR_ID = '#Password-error'
+  DATE_ERROR_ID = "#BirthDay-error"
 
 
   def enter_email(email)
@@ -23,6 +25,18 @@ class ASOS_Registration
     sleep 1
   end
 
+  def enter_password(password)
+    fill_in('Password', with: password)
+    sleep 1
+  end
+
+  def enter_day(day)
+    select(day, :from => 'BirthDay')
+    sleep 1
+  end
+
+
+
 
 
   def email_error_message
@@ -35,6 +49,14 @@ class ASOS_Registration
 
   def last_name_error
     find(LAST_NAME_ERROR_ID).text
+  end
+
+  def password_error
+    find(PASSWORD_ERROR_ID).text
+  end
+
+  def date_error
+    find(DATE_ERROR_ID).text
   end
 
 end
