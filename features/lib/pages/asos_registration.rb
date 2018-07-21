@@ -35,6 +35,16 @@ class ASOS_Registration
     sleep 1
   end
 
+  def enter_month(month)
+    select(month, :from => 'BirthMonth')
+    sleep 1
+  end
+
+  def enter_year(year)
+    select(year, :from => 'BirthYear')
+    sleep 1
+  end
+
 
 
 

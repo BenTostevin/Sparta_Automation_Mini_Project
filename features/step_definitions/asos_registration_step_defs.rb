@@ -24,6 +24,17 @@ Given(/^I enter the day in the date field (.*)$/) do |day|
   @asos_site.asos_registration.enter_day(day)
 end
 
+When(/^I enter the month in the date field (.*)$/) do |month|
+  @asos_site.asos_registration.enter_month(month)
+end
+
+When(/^I enter the year in the date field (.*)$/) do |year|
+  @asos_site.asos_registration.enter_year(year)
+end
+
+
+
+
 
 
 
