@@ -40,7 +40,7 @@ class ASOS_Homepage
 
   def find_product(product)
     fill_in('q', with: product)
-    find(:xpath, `//*[@id="chrome-sticky-header"]/div[1]/div/div/form/div/button/svg/path`)
+    click_button('Search')
   end
 
 end

@@ -5,10 +5,11 @@ Feature: Asos Shopping
     And I enter <email> in the email field
     And I enter <password> in the passwrod field
     And I click sign in
-    And I go to the <product> page
+    And I search for a <product>
+    And I click on the product with product id <product_id>
     When I add a <product> to my bag
     Then I should see a <product> in my bag
 
     Examples:
-     | email | password | product |
-     | receivertestsparta@gmail.com | Password01! | oversized-t-shirt-with-check-print | 
+     | email | password | product | product_id |
+     | receivertestsparta@gmail.com | Password01! | oversized-t-shirt-with-check-print | 9517815 |
