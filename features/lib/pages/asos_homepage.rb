@@ -38,4 +38,9 @@ class ASOS_Homepage
     find("._1k1reGo")[0].text.include?("Sign In")
   end
 
+  def find_product(product)
+    fill_in('q', with: product)
+    find(:xpath, `//*[@id="chrome-sticky-header"]/div[1]/div/div/form/div/button/svg/path`)
+  end
+
 end
