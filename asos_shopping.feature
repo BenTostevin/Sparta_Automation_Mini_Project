@@ -11,4 +11,4 @@ Feature: Asos Shopping
 
     Examples:
      | email | password | product |
-     | receivertestsparta@gmail.com | Password01! | design-oversized-t-shirt-with-check-print | 
+     | receivertestsparta@gmail.com | Password01! | oversized-t-shirt-with-check-print | 
