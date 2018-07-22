@@ -1,4 +1,4 @@
-Feature: Asos Login
+Feature: Asos Register
 
   Scenario Outline: The email field on the registration page is wrongly entered
     Given I access the asos registration page
