@@ -6,14 +6,10 @@ When(/^I click on the product with product id (.*)$/) do |product_id|
   @asos_site.asos_shopping.click_product(product_id)
 end
 
-Given(/^I choose size (.*)$/) do |size|
-  @asos_site.asos_shopping.choose_size(size)
+When(/^I add it to my bag$/) do
+  @asos_site.asos_shopping.add_to_bag
 end
 
-When(/^I add a (.*) to my bag$/) do |product|
-
-end
-
-Then(/^I should see a (.*) in my bag$/) do |product|
+Then(/^I should an error saying (.*)$/) do |error|
 
 end

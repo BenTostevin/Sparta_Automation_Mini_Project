@@ -12,5 +12,11 @@ class ASOS_Shopping
     sleep 1
   end
 
+  def add_to_bag
+    find('#product-add').click
+  end
 
+  def no_size_error(error)
+    find('.basic-error-box').text == error
+  end
 end
